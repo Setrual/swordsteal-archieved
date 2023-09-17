@@ -21,7 +21,7 @@ public final class ProjectSwordsteal extends JavaPlugin implements Listener {
     public void onEnable() {
         // Plugin startup logic
         regEventsLog();
-        Bukkit.getPluginManager().registerEvents(new test_listeners(), this);
+        Bukkit.getPluginManager().registerEvents(this, this);
         CompleteLog();
 
 
