@@ -1,30 +1,25 @@
 package me.projectswordsteal.org.projectswordsteal;
 
-import com.google.gson.internal.bind.util.ISO8601Utils;
+import me.projectswordsteal.org.projectswordsteal.listeners.events.test_events;
+import me.projectswordsteal.org.projectswordsteal.listeners.test_listeners;
+import org.bukkit.Bukkit;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class ProjectSwordsteal extends JavaPlugin {
+import static me.projectswordsteal.org.projectswordsteal.listeners.message.cmd_logs.CompleteLog;
+import static me.projectswordsteal.org.projectswordsteal.listeners.message.cmd_logs.regEventsLog;
+
+public final class ProjectSwordsteal extends JavaPlugin implements Listener {
 
 
-    private static void startupmsg() {
-        System.out.println("Enabling Project Swordsteal....");
-    }
-    private static void pmsg(String message) {
-        System.out.println(message);
-    }
-
-    public static void test() {
-        System.out.println("Test had ran sucessfully!");
-    }
 
     @Override
     public void onEnable() {
         // Plugin startup logic
-        startupmsg();
-
-        pmsg("Checked! Method pmsg worked!");
-
-        test();
+        regEventsLog();
+        Bukkit.getPluginManager().registerEvents(new test_listeners(), this);
+        CompleteLog();
 
     }
 
