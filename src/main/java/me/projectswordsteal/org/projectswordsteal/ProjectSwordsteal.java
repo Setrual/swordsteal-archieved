@@ -28,17 +28,7 @@ public final class ProjectSwordsteal extends JavaPlugin implements Listener {
     }
 
 
-    @EventHandler
-    public void onPlayerMove(PlayerMoveEvent e) {
-        e.setCancelled(true);
-        e.getPlayer().sendMessage(ChatColor.RED + "You cannot move right now!");
 
-    }
-
-    @EventHandler
-    public void onPlayerEggThrow(PlayerEggThrowEvent e) {
-        e.getPlayer().sendMessage(ChatColor.BLUE + "You just threw an egg!");
-    }
 
     @Override
     public void onDisable() {
