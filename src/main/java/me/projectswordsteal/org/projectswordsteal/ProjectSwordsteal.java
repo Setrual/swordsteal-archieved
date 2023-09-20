@@ -6,12 +6,13 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerEggThrowEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import static me.projectswordsteal.org.projectswordsteal.listeners.message.cmd_logs.CompleteLog;
-import static me.projectswordsteal.org.projectswordsteal.listeners.message.cmd_logs.regEventsLog;
+import static me.projectswordsteal.org.projectswordsteal.listeners.message.cmd_logs.*;
 
 public final class ProjectSwordsteal extends JavaPlugin implements Listener {
 
@@ -26,7 +27,17 @@ public final class ProjectSwordsteal extends JavaPlugin implements Listener {
 
 
     }
+    @EventHandler
+    public void onPlayerDeath(PlayerDeathEvent e) {
+        e.setDeathMessage("Test");
 
+    }
+
+    @EventHandler
+    public void onPlayerKill(PlayerJoinEvent e) {
+        e.getPlayer();
+        e.setJoinMessage("test");
+    }
 
 
 
