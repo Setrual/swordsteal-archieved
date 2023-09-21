@@ -29,14 +29,13 @@ public final class ProjectSwordsteal extends JavaPlugin implements Listener {
     }
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent e) {
-        e.setDeathMessage("Test");
+        e.setDeathMessage("The player death event test had ran sucessfully.");
 
     }
 
     @EventHandler
     public void onPlayerKill(PlayerJoinEvent e) {
-        e.getPlayer();
-        e.setJoinMessage("test");
+        e.setJoinMessage("The joining event test is ran sucessfully.");
     }
 
 
