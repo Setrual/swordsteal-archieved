@@ -4,3 +4,5 @@ But if you want more updated or completed builds go to the [development channels
 
 ## Builds/Releases
 For more builds, check back for updates soon.
+
+# THIS REPO IS ACHIEVED FOR FURTHER UPDATES, THIS REPO WILL BE A MIDDLE TEST PUSH BEFORE THE MAIN PUSH TO THE CORE REPO FORKED.
